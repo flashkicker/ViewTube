@@ -3,18 +3,18 @@ import React from "react"
 class SearchBar extends React.Component {
 	state = { term: "" }
 
-	onInputChange = (event) => {
+	onInputChange = event => {
 		this.setState({ term: event.target.value })
 	}
 
-	onFormSubmit = (event) => {
+	onFormSubmit = event => {
 		event.preventDefault()
-		this.props.onSubmit(this.state.term)
+		this.props.onTermSubmit(this.state.term)
 	}
 
 	render() {
 		return (
-			<div  className="search-bar ui basic segment" style={{ width: "450px" }}>
+			<div className="ui basic segment" style={{ width: "450px" }}>
 				<form onSubmit={this.onFormSubmit} className="ui form">
 					<div className="field">
 						<label>Search</label>
