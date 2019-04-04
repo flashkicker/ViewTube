@@ -19,4 +19,4 @@ const VideoItem = props => {
 	)
 }
 
-export default VideoItem
+export default Vide
